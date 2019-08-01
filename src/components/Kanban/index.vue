@@ -7,83 +7,102 @@
       label-width="100px"
       class="demo-ruleForm"
     >
-      <div class="hang">
-        <el-form-item label="医生姓名" prop="name">
-          <el-input v-model="ruleForm.name" />
-        </el-form-item>
-        <el-form-item label="手机号码" prop="name">
-          <el-input v-model="ruleForm.name" />
-        </el-form-item>
-      </div>
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <el-form-item label="医生姓名" prop="name">
+            <el-input v-model="ruleForm.name" />
+          </el-form-item>
+        </el-col>
+        <el-col :span="6">
+          <el-form-item label="手机号码" prop="name">
+            <el-input v-model="ruleForm.name" />
+          </el-form-item>
+        </el-col>
 
-      <div class="hang">
-        <el-form-item label="医院" prop="region">
-          <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-            <el-option label="区域一" value="shanghai" />
-            <el-option label="区域二" value="beijing" />
-          </el-select>
-        </el-form-item>
-        <el-form-item label="职称" prop="region">
-          <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-            <el-option label="李医生" value="shanghai" />
-            <el-option label="王医生" value="beijing" />
-          </el-select>
-        </el-form-item>
-      </div>
+        <el-col :span="6">
+          <el-form-item label="职称" prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+              <el-option label="李医生" value="shanghai" />
+              <el-option label="王医生" value="beijing" />
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
 
-      <el-form-item label="科室" prop="region">
-        <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
-          <el-option label="李医生" value="shanghai" />
-          <el-option label="王医生" value="beijing" />
-        </el-select>
-      </el-form-item>
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <el-form-item label="医院" prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+              <el-option label="区域一" value="shanghai" />
+              <el-option label="区域二" value="beijing" />
+            </el-select>
+          </el-form-item>
+        </el-col>
 
-      <el-form-item label="资格证书" prop="delivery">
-        <el-upload
-          action="https://jsonplaceholder.typicode.com/posts/"
-          list-type="picture-card"
-          :on-preview="handlePictureCardPreview"
-          :on-remove="handleRemove"
-          :limit="1"
-          width="300"
-        >
-          <i class="el-icon-plus" />
-        </el-upload>
-        <el-dialog :visible.sync="dialogVisible">
-          <img width="100%" :src="dialogImageUrl" alt="">
-        </el-dialog>
-      </el-form-item>
+        <el-col :span="6">
+          <el-form-item label="科室" prop="region">
+            <el-select v-model="ruleForm.region" placeholder="请选择活动区域">
+              <el-option label="李医生" value="shanghai" />
+              <el-option label="王医生" value="beijing" />
+            </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
 
-      <el-form-item label="医生证" prop="delivery">
-        <el-upload
-          action="https://jsonplaceholder.typicode.com/posts/"
-          list-type="picture-card"
-          :on-preview="handlePictureCardPreview"
-          :on-remove="handleRemove"
-          :limit="1"
-          width="300"
-        >
-          <i class="el-icon-plus" />
-        </el-upload>
-        <el-dialog :visible.sync="dialogVisible">
-          <img width="100%" :src="dialogImageUrl" alt="">
-        </el-dialog>
-      </el-form-item>
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <el-form-item label="资格证书" prop="delivery">
+            <el-upload
+              action="https://jsonplaceholder.typicode.com/posts/"
+              list-type="picture-card"
+              :on-preview="handlePictureCardPreview"
+              :on-remove="handleRemove"
+              :limit="1"
+              width="300"
+            >
+              <i class="el-icon-plus" />
+            </el-upload>
+            <el-dialog :visible.sync="dialogVisible">
+              <img width="100%" :src="dialogImageUrl" alt="">
+            </el-dialog>
+          </el-form-item>
+        </el-col>
 
-      <el-form-item label="工作照片" prop="delivery">
-        <el-upload
-          action="https://jsonplaceholder.typicode.com/posts/"
-          list-type="picture-card"
-          :on-preview="handlePictureCardPreview"
-          :on-remove="handleRemove"
-          :limit="1"
-        >
-          <i class="el-icon-plus" />
-        </el-upload>
-        <el-dialog :visible.sync="dialogVisible">
-          <img width="100%" :src="dialogImageUrl" alt="">
-        </el-dialog>
-      </el-form-item>
+        <el-col :span="6">
+          <el-form-item label="医生证" prop="delivery">
+            <el-upload
+              action="https://jsonplaceholder.typicode.com/posts/"
+              list-type="picture-card"
+              :on-preview="handlePictureCardPreview"
+              :on-remove="handleRemove"
+              :limit="1"
+              width="300"
+            >
+              <i class="el-icon-plus" />
+            </el-upload>
+            <el-dialog :visible.sync="dialogVisible">
+              <img width="100%" :src="dialogImageUrl" alt="">
+            </el-dialog>
+          </el-form-item>
+        </el-col>
+        <el-col :span="6">
+          <el-form-item label="工作照片" prop="delivery">
+            <el-upload
+              action="https://jsonplaceholder.typicode.com/posts/"
+              list-type="picture-card"
+              :on-preview="handlePictureCardPreview"
+              :on-remove="handleRemove"
+              :limit="1"
+              width="300"
+            >
+              <i class="el-icon-plus" />
+            </el-upload>
+            <el-dialog :visible.sync="dialogVisible">
+              <img width="100%" :src="dialogImageUrl" alt="">
+            </el-dialog>
+          </el-form-item>
+        </el-col>
+      </el-row>
 
       <el-form-item label="简介" prop="desc">
         <el-input v-model="ruleForm.desc" type="textarea" />
@@ -125,7 +144,10 @@
       </el-form-item>
 
       <el-form-item>
-        <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
+        <el-button
+          type="primary"
+          @click="submitForm('ruleForm')"
+        >保存</el-button>
         <el-button @click="resetForm('ruleForm')">取消</el-button>
       </el-form-item>
     </el-form>
@@ -213,22 +235,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hang{
+.hang {
   z-index: -1;
-  .el-form-item--medium{
+  .el-form-item--medium {
     width: 50%;
     float: left;
   }
 }
-.el-input{
+.el-input {
   width: 200px;
   z-index: 1000;
 }
-.el-form-item__content{
+.el-form-item__content {
   z-index: 1000;
 }
-.el-select{
-    z-index: 1000;
+.el-select {
+  z-index: 1000;
 }
 .yisheng {
   width: 97%;

@@ -22,93 +22,95 @@ const componentsRouter = {
       component: () =>
                     import('@/views/components-demo/sticky'),
       name: 'sticky',
-      meta: { title: '医生信息管理' }
+      meta: { title: '医生信息列表' }
 
     }]
   },
-  {
-    path: 'markdown',
-    component: () =>
-                import('@/views/components-demo/markdown'),
-    name: 'MarkdownDemo',
-    meta: { title: 'Markdown' }
-  },
-  {
-    path: 'json-editor',
-    component: () =>
-                import('@/views/components-demo/json-editor'),
-    name: 'JsonEditorDemo',
-    meta: { title: 'JSON Editor' }
-  },
-  {
-    path: 'split-pane',
-    component: () =>
-                import('@/views/components-demo/split-pane'),
-    name: 'SplitpaneDemo',
-    meta: { title: 'SplitPane' }
-  },
-  {
-    path: 'avatar-upload',
-    component: () =>
-                import('@/views/components-demo/avatar-upload'),
-    name: 'AvatarUploadDemo',
-    meta: { title: 'Upload' }
-  },
-  {
-    path: 'dropzone',
-    component: () =>
-                import('@/views/components-demo/dropzone'),
-    name: 'DropzoneDemo',
-    meta: { title: 'Dropzone' }
-  },
-  {
-    path: 'sticky',
-    component: () =>
-                import('@/views/components-demo/sticky'),
-    name: 'StickyDemo',
-    meta: { title: 'Sticky' }
-  },
-  {
-    path: 'count-to',
-    component: () =>
-                import('@/views/components-demo/count-to'),
-    name: 'CountToDemo',
-    meta: { title: 'Count To' }
-  },
-  {
-    path: 'mixin',
-    component: () =>
-                import('@/views/components-demo/mixin'),
-    name: 'ComponentMixinDemo',
-    meta: { title: 'Component Mixin' }
-  },
-  {
-    path: 'back-to-top',
-    component: () =>
-                import('@/views/components-demo/back-to-top'),
-    name: 'BackToTopDemo',
-    meta: { title: 'Back To Top' }
-  },
-  {
-    path: 'drag-dialog',
-    component: () =>
-                import('@/views/components-demo/drag-dialog'),
-    name: 'DragDialogDemo',
-    meta: { title: 'Drag Dialog' }
-  },
+  // {
+  //     path: 'markdown',
+  //     component: () =>
+  //         import ('@/views/components-demo/markdown'),
+  //     name: 'MarkdownDemo',
+  //     meta: { title: 'Markdown' }
+  // },
+  // {
+  //     path: 'json-editor',
+  //     component: () =>
+  //         import ('@/views/components-demo/json-editor'),
+  //     name: 'JsonEditorDemo',
+  //     meta: { title: 'JSON Editor' }
+  // },
+  // {
+  //     path: 'split-pane',
+  //     component: () =>
+  //         import ('@/views/components-demo/split-pane'),
+  //     name: 'SplitpaneDemo',
+  //     meta: { title: 'SplitPane' }
+  // },
+  // {
+  //     path: 'avatar-upload',
+  //     component: () =>
+  //         import ('@/views/components-demo/avatar-upload'),
+  //     name: 'AvatarUploadDemo',
+  //     meta: { title: 'Upload' }
+  // },
+  // {
+  //     path: 'dropzone',
+  //     component: () =>
+  //         import ('@/views/components-demo/dropzone'),
+  //     name: 'DropzoneDemo',
+  //     meta: { title: 'Dropzone' }
+  // },
+  // {
+  //     path: 'sticky',
+  //     component: () =>
+  //         import ('@/views/components-demo/sticky'),
+  //     name: 'StickyDemo',
+  //     meta: { title: 'Sticky' }
+  // },
+  // {
+  //     path: 'count-to',
+  //     component: () =>
+  //         import ('@/views/components-demo/count-to'),
+  //     name: 'CountToDemo',
+  //     meta: { title: 'Count To' }
+  // },
+  // {
+  //     path: 'mixin',
+  //     component: () =>
+  //         import ('@/views/components-demo/mixin'),
+  //     name: 'ComponentMixinDemo',
+  //     meta: { title: 'Component Mixin' }
+  // },
+  // {
+  //     path: 'back-to-top',
+  //     component: () =>
+  //         import ('@/views/components-demo/back-to-top'),
+  //     name: 'BackToTopDemo',
+  //     meta: { title: 'Back To Top' }
+  // },
+  // {
+  //     path: 'drag-dialog',
+  //     component: () =>
+  //         import ('@/views/components-demo/drag-dialog'),
+  //     name: 'DragDialogDemo',
+  //     meta: { title: 'Drag Dialog' }
+  // },
   {
     path: 'drag-select',
     component: () =>
                 import('@/views/components-demo/drag-select'),
     name: 'DragSelectDemo',
-    meta: { title: '分配助理' }
+    meta: { title: '分配助理' },
+    hidden: true
   },
   {
     path: 'dnd-list',
     component: () =>
                 import('@/views/components-demo/dnd-list'),
     name: 'DndListDemo',
-    meta: { title: '医药代表' }
+    meta: { title: '医药代表' },
+    hidden: true
   },
   {
     path: 'drag-kanban',
