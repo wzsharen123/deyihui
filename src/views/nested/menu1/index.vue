@@ -1,7 +1,19 @@
 <template>
-  <div style="padding:30px;">
-    <el-alert :closable="false" title="menu 1">
-      <router-view />
-    </el-alert>
+  <div style="padding:15px;">
+
+    <medical />
+
   </div>
 </template>
+
+<script>
+
+import medical from '@/components/medical/medical'
+export default {
+
+  components: {
+    medical
+  }
+
+}
+</script>

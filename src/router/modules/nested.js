@@ -12,10 +12,10 @@ const nestedRouter = {
     icon: 'nested'
   },
   children: [{
-    path: 'menu1-1',
+    path: 'menu1',
     component: () =>
-                import('@/views/nested/menu1/menu1-1'),
-    name: 'Menu1-1',
+                import('@/views/nested/menu1'),
+    name: 'Menu1',
     meta: { title: '医药代表列表' }
   },
   {
@@ -24,6 +24,30 @@ const nestedRouter = {
     component: () =>
                 import('@/views/nested/menu2/index'),
     meta: { title: '经销商列表' }
+  },
+  {
+    path: 'menucread',
+    name: 'menucread',
+    component: () =>
+                import('@/views/nested/menucread/index'),
+    meta: { title: '助理编辑' },
+    hidden: true
+  },
+  {
+    path: 'doctor',
+    name: 'doctor',
+    component: () =>
+                import('@/views/nested/doctor/index'),
+    meta: { title: '医生' }
+
+  },
+  {
+    path: 'drug',
+    name: 'drug',
+    component: () =>
+                import('@/views/nested/drug/index'),
+    meta: { title: '所属药品' }
+
   }
   ]
 }
